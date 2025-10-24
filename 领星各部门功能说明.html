@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>领星ERP系统各部门功能展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .ppt-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            padding: 40px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        }
+        
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3a7bd5;
+        }
+        
+        .header h1 {
+            color: #3a7bd5;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #666;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        
+        .content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+        }
+        
+        .column {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .column h3 {
+            color: #3a7bd5;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .function-list {
+            list-style-type: none;
+        }
+        
+        .function-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: #f8fafc;
+            border-left: 4px solid #3a7bd5;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .function-list li:hover {
+            background: #eef5ff;
+            transform: translateX(5px);
+        }
+        
+        .unavailable {
+            background: #fff9e6;
+            border-left: 4px solid #ffb74d;
+        }
+        
+        .unavailable:hover {
+            background: #fff4d9;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .slide-indicator {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .department-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #3a7bd5;
+        }
+    </style>
+</head>
+<body>
+    <div class="ppt-container">
+        <!-- 封面页 -->
+        <div class="slide active" id="slide-0">
+            <div class="header">
+                <h1>领星ERP系统各部门功能展示</h1>
+                <h2>跨境电商管理解决方案</h2>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <div style="font-size: 80px; color: #3a7bd5; margin-bottom: 30px;">📊</div>
+                <h2 style="font-size: 32px; color: #333; margin-bottom: 20px;">各部门可实现功能与数据查询</h2>
+                <p style="font-size: 18px; color: #666; max-width: 600px; text-align: center; line-height: 1.6;">
+                    本PPT展示了领星ERP系统为各部门提供的功能支持，包括可实现的功能和不可实现功能。
+                </p>
+                <p style="margin-top: 40px; color: #888;">使用 ← → 方向键切换页面</p>
+            </div>
+            <div class="footer">
+                <p></p>
+            </div>
+            <div class="slide-indicator">1 / 6</div>
+        </div>
+        
+        <!-- 产品部门 -->
+        <div class="slide" id="slide-1">
+            <div class="header">
+                <h1>产品部</h1>
+                <h2>产品开发与产品管理</h2>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="department-icon">📦</div>
+                    <h3>可实现功能与数据查询</h3>
+                    <ul class="function-list">
+                        <li>产品管理</li>
+                        <li>SKU销售表现</li>
+                        <li>竞品价格与排名监控</li>
+                        <li>产品评价与反馈汇总</li>
+                        <li>新品开发</li>
+                        <li>产品退货率与原因分析</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="department-icon">❓</div>
+                    <h3>不可实现功能</h3>
+                    <ul class="function-list">
+                        <li class="unavailable">利润分析</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-indicator">2 / 6</div>
+        </div>
+        
+        <!-- 采购部门 -->
+        <div class="slide" id="slide-2">
+            <div class="header">
+                <h1>采购部</h1>
+                <h2>供应商管理与采购优化</h2>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="department-icon">🛒</div>
+                    <h3>可实现功能与数据查询</h3>
+                    <ul class="function-list">
+                        <li>供应商维护与查询</li>
+                        <li>采购成本与价格趋势分析</li>
+                        <li>采购订单执行跟踪</li>
+                        <li>采购到货入库跟踪</li>
+                        <li>供应商账期与付款管理</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="department-icon">❓</div>
+                    <h3>不可实现功能</h3>
+                    <ul class="function-list">
+                        <li class="unavailable">暂无</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-indicator">3 / 6</div>
+        </div>
+        
+        <!-- 计划部门 -->
+        <div class="slide" id="slide-3">
+            <div class="header">
+                <h1>计划部</h1>
+                <h2>需求预测与库存优化</h2>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="department-icon">📈</div>
+                    <h3>可实现功能与数据查询</h3>
+                    <ul class="function-list">
+                        <li>请购数量查询</li>
+                        <li>采购数据查询</li>
+                        <li>未交数量查询</li>
+                        <li>库存报表</li>
+                        <li>库存周转率报表</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="department-icon">❓</div>
+                    <h3>不可实现功能</h3>
+                    <ul class="function-list">
+                        <li class="unavailable">请购数量、采购数量、未交数量不能一起导出，需要加工</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-indicator">4 / 6</div>
+        </div>
+        
+        <!-- 物流部门 -->
+        <div class="slide" id="slide-4">
+            <div class="header">
+                <h1>物流部</h1>
+                <h2>仓储管理与物流配送</h2>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="department-icon">🚚</div>
+                    <h3>可实现功能与数据查询</h3>
+                    <ul class="function-list">
+                        <li>物流时效与成本分析报表</li>
+                        <li>头程物流跟踪与管理</li>
+                        <li>FBA库存与在途库存监控</li>
+                        <li>海外仓库存与在途库存监控</li>
+                        <li>退货处理与逆向物流管理</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="department-icon">❓</div>
+                    <h3>不可实现功能</h3>
+                    <ul class="function-list">
+                        <li class="unavailable">部分海外仓功能没有对接：西邮组合SKU</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-indicator">5 / 6</div>
+        </div>
+        
+        <!-- 运营部门 -->
+        <div class="slide" id="slide-5">
+            <div class="header">
+                <h1>运营部</h1>
+                <h2>销售管理与业务数据查询</h2>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="department-icon">💻</div>
+                    <h3>可实现功能与数据查询</h3>
+                    <ul class="function-list">
+                        <li>销售业绩查询</li>
+                        <li>广告分析</li>
+                        <li>Listing表现</li>
+                        <li>关键词排名</li>
+                        <li>客户评价与反馈管理</li>
+                        <li>多店铺销售数据汇总分析</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="department-icon">❓</div>
+                    <h3>不可实现功能</h3>
+                    <ul class="function-list">
+                        <li class="unavailable">VC订单无法自动同步，需要手动导入</li>
+                        <li class="unavailable">沃尔玛平台产品利润不准确</li>
+                        <li class="unavailable">homedepot平台没有</li>
+                        <li class="unavailable">部分产品一件代发存在问题，需要手动在海外仓创建</li>
+                        <li class="unavailable">wayfair、美客多货件没有，需要手动创建、手动收货</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-indicator">6 / 6</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            // 显示当前幻灯片
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[n].classList.add('active');
+                currentSlide = n;
+            }
+            
+            // 键盘事件监听
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    // 下一张
+                    if (currentSlide < slides.length - 1) {
+                        showSlide(currentSlide + 1);
+                    }
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    // 上一张
+                    if (currentSlide > 0) {
+                        showSlide(currentSlide - 1);
+                    }
+                }
+            });
+            
+            // 初始化显示第一张幻灯片
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>
